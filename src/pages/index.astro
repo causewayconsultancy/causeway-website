@@ -1,0 +1,532 @@
+
+---
+const services = [
+  {
+    number: "01",
+    title: "Discovery & Problem Definition",
+    description: "Getting beneath the surface to understand the real challenge, ask better questions, and identify what matters most."
+  },
+  {
+    number: "02",
+    title: "Strategic Thinking & Decision Support",
+    description: "Bringing structure to complexity, connecting evidence and insight, and helping leaders make thoughtful, informed decisions."
+  },
+  {
+    number: "03",
+    title: "Facilitation & Stakeholder Engagement",
+    description: "Creating space for meaningful conversations, diverse perspectives, and the shared understanding needed to move forward."
+  },
+  {
+    number: "04",
+    title: "Change & Implementation",
+    description: "Turning insight into action through practical planning, thoughtful change, and meaningful implementation."
+  }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Causeway Decision Quality Consultancy helps organizations navigate complexity, improve decision quality, and move forward with clarity." />
+    <title>Causeway | Think deeper. Change smarter.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">
+        <img src="/causeway-logo.png" alt="Causeway Decision Quality Consultancy" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#thinking">Our Thinking</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Clarity in complexity</p>
+          <h1>Think deeper.<br />Change smarter.</h1>
+          <p>
+            Better decisions begin with better questions.<br />
+            We help organizations navigate complexity, uncover what matters, and move forward with clarity and confidence.
+          </p>
+          <a href="mailto:kchapman@causewayconsultancy.ca" class="cta">Let's start a conversation</a>
+        </div>
+      </section>
+
+      <section class="intro section" id="about">
+        <div class="section-inner">
+          <p class="eyebrow">A thoughtful way forward</p>
+          <h2>Find the cause.<br />Find the way.</h2>
+          <p>
+            Meaningful progress starts with understanding the problem
+            we're actually trying to solve. Through disciplined discovery,
+            evidence-informed thinking, and meaningful stakeholder
+            engagement, we help organizations make sense of complexity
+            and find a clearer path forward.
+          </p>
+        </div>
+      </section>
+
+      <section class="thinking section" id="thinking">
+        <div class="section-inner">
+          <p class="eyebrow">The Thinking Behind Our Work</p>
+
+          <h2>Better questions lead to better decisions.</h2>
+
+          <div class="thinking-content">
+            <p>
+              Causeway was founded by Krista Chapman, whose perspective
+              on organizational challenges has been shaped by experience
+              at every level of complex organizations.
+            </p>
+
+            <p>
+              Beginning her career as a frontline practitioner, Krista
+              developed a firsthand understanding of service delivery,
+              the realities of day-to-day operations, and the people
+              behind the work. She went on to build more than 15 years
+              of leadership experience spanning clinical practice,
+              operations, quality, strategy, and organizational
+              transformation.
+            </p>
+
+            <p>
+              Having worked from the frontline through to senior
+              executive leadership, she understands that decisions
+              made at the organizational level have real consequences
+              for the people delivering and receiving services every
+              day. This perspective has shaped her belief that
+              meaningful improvement requires more than good intentions
+              or well-designed strategies. It requires understanding
+              how organizations actually work, listening to the people
+              within them, and connecting the bigger picture to the
+              realities on the ground.
+            </p>
+
+            <p>
+              Throughout her career, Krista has worked alongside
+              executive teams, multidisciplinary groups, and frontline
+              professionals across Canada and the United States.
+              Her experience includes navigating complex operational
+              environments, leading organizational improvement
+              initiatives, advancing quality and performance, and
+              helping organizations make sense of change.
+            </p>
+
+            <p>
+              With a Master's degree in Precision Health, specializing
+              in innovation and entrepreneurship, Krista brings
+              together practical experience, systems-level thinking,
+              evidence-informed decision-making, and a genuine
+              appreciation for the human side of organizational change.
+            </p>
+
+            <p>
+              Through Causeway, she works alongside organizations
+              and leaders to navigate complexity, uncover what matters,
+              and find a clearer path forward.
+            </p>
+
+            <p class="thinking-closing">
+              Because better decisions come from understanding more
+              than just the problem. They come from understanding
+              the people, perspectives, and systems connected to it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-inner">
+          <p class="eyebrow">What we do</p>
+          <h2>Make sense of the messy.<br />Move toward what matters.</h2>
+
+          <div class="service-grid">
+            {services.map((service) => (
+              <article class="service">
+                <span class="number">{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="approach section" id="approach">
+        <div class="section-inner">
+          <p class="eyebrow">How we work</p>
+          <h2>Comfortable in the grey.<br />Focused on the way forward.</h2>
+          <p>
+            We bring curiosity, structure, and an open mind to complex
+            challenges. We listen carefully, ask thoughtful questions,
+            explore different perspectives, and work alongside people
+            to uncover what matters. The goal isn't simply to find an
+            answer. It's to make better decisions about what comes next.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-inner">
+          <p class="eyebrow">Start a conversation</p>
+          <h2>Have a complex challenge?<br />Let's work through it.</h2>
+          <p>
+            Whether you're navigating a difficult decision, exploring
+            a new direction, or trying to make sense of a complex
+            challenge, we'd welcome the conversation.
+          </p>
+          <a href="mailto:kchapman@causewayconsultancy.ca" class="cta">
+            kchapman@causewayconsultancy.ca
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© {new Date().getFullYear()} Causeway Decision Quality Consultancy Inc.</p>
+      <p>Think deeper. Change smarter.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    --slate: #23364A;
+    --coastal: #668A9A;
+    --stone: #C2BBA8;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    color: var(--slate);
+    background: var(--white);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: var(--white);
+  }
+
+  .logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+  }
+
+  .nav-links a {
+    color: var(--slate);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--coastal);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=85");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(24, 42, 55, 0.82),
+      rgba(24, 42, 55, 0.35)
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--coastal);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero .eyebrow {
+    color: var(--white);
+  }
+
+  h1,
+  h2 {
+    margin: 0 0 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: clamp(48px, 6vw, 76px);
+  }
+
+  h2 {
+    font-size: clamp(38px, 4.5vw, 56px);
+  }
+
+  .hero p {
+    max-width: 650px;
+    margin: 0 0 32px;
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+
+  .cta:hover {
+    background: var(--white);
+    color: var(--slate);
+  }
+
+  .section {
+    padding: 100px 10%;
+    background: var(--white);
+  }
+
+  .section-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .intro p:not(.eyebrow) {
+    max-width: 760px;
+    font-size: 18px;
+  }
+
+  .thinking {
+    background: var(--white);
+  }
+
+  .thinking h2 {
+    max-width: 850px;
+    margin-bottom: 35px;
+  }
+
+  .thinking-content {
+    max-width: 850px;
+  }
+
+  .thinking-content p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 22px;
+  }
+
+  .thinking-content .thinking-closing {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid var(--stone);
+    color: var(--coastal);
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  /* SERVICES */
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 70px;
+    margin-top: 75px;
+  }
+
+  .service {
+    border-top: 1px solid var(--stone);
+    padding-top: 28px;
+  }
+
+  .number {
+    display: block;
+    color: var(--coastal);
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+  }
+
+  h3 {
+    margin: 0 0 16px;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .service p {
+    max-width: 440px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .approach {
+    background: var(--white);
+  }
+
+  .approach p:not(.eyebrow) {
+    max-width: 760px;
+    font-size: 18px;
+  }
+
+  .contact {
+    background: var(--slate);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .contact .eyebrow {
+    color: var(--stone);
+  }
+
+  .contact p:not(.eyebrow) {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 7%;
+    background: #1B2B3B;
+    color: var(--white);
+    font-size: 13px;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .header {
+      flex-direction: column;
+      gap: 18px;
+      padding: 20px;
+    }
+
+    .logo img {
+      width: 165px;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 18px;
+    }
+
+    .nav-links a {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 70px 8%;
+      background-position: center;
+    }
+
+    .hero p {
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 70px 8%;
+    }
+
+    .thinking-content p {
+      font-size: 16px;
+    }
+
+    .thinking-content .thinking-closing {
+      font-size: 18px;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      margin-top: 50px;
+    }
+
+    .number {
+      font-size: 56px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    .service p {
+      font-size: 15px;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 22px;
+    }
+  }
+</style>
