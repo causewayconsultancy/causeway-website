@@ -4,22 +4,26 @@ const services = [
   {
     number: "01",
     title: "Discovery & Problem Definition",
-    description: "Getting beneath the surface to understand the real challenge, ask better questions, and identify what matters most."
+    description: "Getting beneath the surface to understand the real challenge, ask better questions, and identify what matters most.",
+    link: "/services/discovery-problem-definition/"
   },
   {
     number: "02",
     title: "Strategic Thinking & Decision Support",
-    description: "Bringing structure to complexity, connecting evidence and insight, and helping leaders make thoughtful, informed decisions."
+    description: "Bringing structure to complexity, connecting evidence and insight, and helping leaders make thoughtful, informed decisions.",
+    link: "/services/strategic-thinking-decision-support/"
   },
   {
     number: "03",
     title: "Facilitation & Stakeholder Engagement",
-    description: "Creating space for meaningful conversations, diverse perspectives, and the shared understanding needed to move forward."
+    description: "Bringing people and perspectives together to build shared understanding and support better decisions.",
+    link: "/services/facilitation-stakeholder-engagement/"
   },
   {
     number: "04",
     title: "Change & Implementation",
-    description: "Turning insight into action through practical planning, thoughtful change, and meaningful implementation."
+    description: "Turning insight into action through practical planning, thoughtful change, and sustainable implementation.",
+    link: "/services/change-implementation/"
   }
 ];
 ---
@@ -37,121 +41,181 @@ const services = [
 
   <body>
     <header class="header">
-      <a href="#home" class="logo">
+      <a href="/" class="logo">
         <img src="/causeway-logo.png" alt="Causeway Decision Quality Consultancy" />
       </a>
+
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#thinking">The Thinking</a>
-        <a href="#services">Services</a>
-        <a href="#approach">How I Work</a>
+        <a href="/about/">About</a>
+        <a href="/thinking/">The Thinking</a>
+        <a href="/philosophy/">Philosophy</a>
+        <a href="/services/">Services</a>
+        <a href="/approach/">How I Work</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
+      <!-- HERO -->
+
       <section class="hero" id="home">
         <div class="hero-overlay"></div>
+
         <div class="hero-content">
           <p class="eyebrow">Clarity in complexity</p>
+
           <h1>Think deeper.<br />Change smarter.</h1>
+
           <p>
-            Better decisions begin with better questions.<br />
-            Causeway helps organizations navigate complexity, uncover what matters, and move forward with clarity and confidence.
+            Better decisions begin with better questions.
+            Causeway helps organizations navigate complexity,
+            uncover what matters, and move forward with clarity
+            and confidence.
           </p>
-          <a href="mailto:kchapman@causewayconsultancy.ca" class="cta">Let's start a conversation</a>
+
+          <a href="#contact" class="cta">
+            Let's start a conversation
+          </a>
         </div>
       </section>
 
-      <section class="intro section" id="about">
+      <!-- INTRODUCTION -->
+
+      <section class="intro section">
         <div class="section-inner">
           <p class="eyebrow">A thoughtful way forward</p>
+
           <h2>Find the cause.<br />Find the way.</h2>
-         <p>
-Meaningful progress starts with understanding the problem
-            an organization is actually trying to solve. Through
-            disciplined discovery, evidence-informed thinking, and
-            meaningful stakeholder engagement, Causeway helps
+
+          <p>
+            Better decisions start with understanding the problem
+            an organization is actually trying to solve.
+
+            Through disciplined discovery, evidence-informed thinking,
+            and thoughtful stakeholder engagement, Causeway helps
             organizations make sense of complexity and find a clearer
             path forward.
-</p>
+          </p>
+
+          <a href="/philosophy/" class="text-link">
+            Discover the thinking behind Causeway →
+          </a>
         </div>
       </section>
 
-      <section class="thinking section" id="thinking">
+      <!-- ABOUT PREVIEW -->
+
+      <section class="about-preview section">
         <div class="section-inner">
-          <p class="eyebrow">The Thinking Behind the Work</p>
-          <h2>Better questions lead to better decisions.</h2>
+          <p class="eyebrow">The person behind Causeway</p>
 
-          <div class="bio">
-            <p>
-              Causeway was founded by Krista Chapman, whose perspective on organizational challenges has been shaped by experience at every level of complex organizations, from frontline healthcare to senior executive leadership.
-            </p>
+          <h2>Experience shaped by people, systems, and the decisions between them.</h2>
 
-            <p>
-              Beginning her career on the frontlines of healthcare, Krista developed a deep appreciation for the people, systems, and decisions that shape care partnerships. Over the past 15+ years, she has worked across clinical practice, operations, quality, and organizational leadership, bringing a practical, systems-level perspective to complex challenges.
-            </p>
+          <p>
+            Founded by Krista Chapman, Causeway brings together more
+            than 15 years of clinical, operational, and senior executive
+            leadership experience.
+          </p>
 
-            <p>
-Having worked from the frontline through to senior executive leadership, Krista understands the importance of bringing together the perspectives of the people who shape, deliver, and experience services every day. She believes meaningful improvement happens when people are genuinely heard, different forms of expertise are valued, and decisions are informed by the lived experiences of those most affected. It requires creating the conditions for open dialogue, shared understanding, and meaningful partnership, while connecting organizational priorities with the realities of everyday practice and experience.            </p>
+          <p>
+            A registered nurse, Certified Health Executive (CHE),
+            and Master of Precision Health (MPrecH), Krista brings
+            a practical understanding of complex organizations and
+            a belief that better decisions begin by listening to
+            the people most affected by them.
+          </p>
 
-            <p>
-              Throughout her career, Krista has worked alongside executive teams, multidisciplinary groups, and frontline professionals across Canada and the United States. Her experience includes navigating complex operational environments, leading organizational improvement initiatives, advancing quality and performance, and helping organizations make sense of change. She remains actively engaged in the healthcare leadership community as a member of the Vancouver Island Chapter Executive of the Canadian College of Health Leaders.
-            </p>
-
-            <p>
-              A registered nurse, Certified Health Executive (CHE), and Master of Precision Health (MPrecH), Krista brings together practical experience, systems-level thinking, evidence-informed decision-making, and a genuine appreciation for the human side of organizational change.
-            </p>
-
-            <p>
-              Through Causeway, Krista works alongside organizations and leaders to navigate complexity, uncover what matters, and find a clearer path forward.
-            </p>
-          </div>
+          <a href="/about/" class="text-link">
+            Get to know Krista →
+          </a>
         </div>
       </section>
+
+      <!-- SERVICES PREVIEW -->
 
       <section class="services section" id="services">
         <div class="section-inner">
           <p class="eyebrow">How Causeway Helps</p>
+
           <h2>Make sense of the messy.<br />Move toward what matters.</h2>
+
+          <p class="section-intro">
+            Every organization faces challenges that require more
+            than quick answers. Causeway supports organizations
+            through four interconnected areas of work.
+          </p>
+
           <div class="service-grid">
             {services.map((service) => (
               <article class="service">
                 <span class="number">{service.number}</span>
+
                 <h3>{service.title}</h3>
+
                 <p>{service.description}</p>
+
+                <a href={service.link} class="text-link">
+                  Explore this service →
+                </a>
               </article>
             ))}
+          </div>
+
+          <div class="services-link">
+            <a href="/services/" class="text-link">
+              Explore all services →
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="approach section" id="approach">
+      <!-- APPROACH PREVIEW -->
+
+      <section class="approach section">
         <div class="section-inner">
           <p class="eyebrow">How I Work</p>
+
           <h2>Comfortable in the grey.<br />Focused on the way forward.</h2>
+
           <p>
             I bring curiosity, structure, and an open mind to complex
             challenges. I listen carefully, ask thoughtful questions,
             explore different perspectives, and work alongside people
-            to uncover what matters. The goal isn't simply to find an
-            answer. It's to make better decisions about what comes next.
+            to uncover what matters.
           </p>
+
+          <p>
+            The goal isn't simply to find an answer. It's to make
+            better decisions about what comes next.
+          </p>
+
+          <a href="/approach/" class="text-link">
+            Learn more about how I work →
+          </a>
         </div>
       </section>
+
+      <!-- CONTACT -->
 
       <section class="contact section" id="contact">
         <div class="section-inner">
           <p class="eyebrow">Start a conversation</p>
+
           <h2>Have a complex challenge?<br />Let's work through it.</h2>
+
           <p>
-            Whether you're navigating a difficult decision, exploring
-            a new direction, or trying to make sense of a complex
-            challenge, I'd welcome the conversation.
+            Whether you're navigating a difficult decision,
+            exploring a new direction, or trying to make sense
+            of a complex challenge, I'd welcome the conversation.
           </p>
+
           <a href="mailto:kchapman@causewayconsultancy.ca" class="cta">
-            kchapman@causewayconsultancy.ca
+            Let's talk
           </a>
+
+          <p class="email">
+            kchapman@causewayconsultancy.ca
+          </p>
         </div>
       </section>
     </main>
@@ -169,6 +233,7 @@ Having worked from the frontline through to senior executive leadership, Krista 
     --coastal: #668A9A;
     --stone: #C2BBA8;
     --white: #FFFFFF;
+    --off-white: #F5F2EA;
   }
 
   * {
@@ -203,13 +268,13 @@ Having worked from the frontline through to senior executive leadership, Krista 
 
   .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 25px;
   }
 
   .nav-links a {
     color: var(--slate);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     transition: color 0.2s ease;
   }
@@ -301,7 +366,6 @@ Having worked from the frontline through to senior executive leadership, Krista 
 
   .section {
     padding: 100px 10%;
-    background: var(--white);
   }
 
   .section-inner {
@@ -309,44 +373,56 @@ Having worked from the frontline through to senior executive leadership, Krista 
     margin: 0 auto;
   }
 
-  .intro p:not(.eyebrow) {
-    max-width: 760px;
-    font-size: 18px;
-  }
-
-  .thinking {
+  .intro {
     background: var(--white);
   }
 
-  .thinking h2 {
-    max-width: 850px;
-    margin-bottom: 35px;
-  }
-
-  .thinking-content {
-    max-width: 850px;
-  }
-
-  .thinking-content p {
-    font-size: 17px;
+  .intro p:not(.eyebrow),
+  .about-preview p:not(.eyebrow) {
+    max-width: 760px;
+    font-size: 18px;
     line-height: 1.85;
-    margin: 0 0 22px;
   }
 
-  .thinking-content .thinking-closing {
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid var(--stone);
+  .about-preview {
+    background: var(--off-white);
+  }
+
+  .about-preview h2 {
+    max-width: 850px;
+  }
+
+  .text-link {
+    display: inline-block;
+    margin-top: 18px;
     color: var(--coastal);
-    font-weight: 600;
-    font-size: 19px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+
+  .text-link:hover {
+    color: var(--slate);
+  }
+
+  /* Services */
+
+  .services {
+    background: var(--white);
+  }
+
+  .section-intro {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.85;
   }
 
   .service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 65px 70px;
-    margin-top: 75px;
+    margin-top: 65px;
   }
 
   .service {
@@ -365,7 +441,7 @@ Having worked from the frontline through to senior executive leadership, Krista 
     margin-bottom: 22px;
   }
 
-  h3 {
+  .service h3 {
     margin: 0 0 16px;
     font-family: "Playfair Display", serif;
     font-size: 28px;
@@ -380,14 +456,26 @@ Having worked from the frontline through to senior executive leadership, Krista 
     line-height: 1.8;
   }
 
+  .services-link {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--stone);
+  }
+
+  /* Approach */
+
   .approach {
-    background: var(--white);
+    background: var(--off-white);
   }
 
   .approach p:not(.eyebrow) {
     max-width: 760px;
     font-size: 18px;
+    line-height: 1.85;
+    margin: 0 0 22px;
   }
+
+  /* Contact */
 
   .contact {
     background: var(--slate);
@@ -405,6 +493,14 @@ Having worked from the frontline through to senior executive leadership, Krista 
     font-size: 17px;
   }
 
+  .contact .email {
+    margin-top: 22px !important;
+    font-size: 14px !important;
+    color: var(--stone);
+  }
+
+  /* Footer */
+
   footer {
     display: flex;
     justify-content: space-between;
@@ -419,10 +515,23 @@ Having worked from the frontline through to senior executive leadership, Krista 
     margin: 0;
   }
 
-  @media (max-width: 700px) {
+  /* Mobile */
+
+  @media (max-width: 900px) {
     .header {
       flex-direction: column;
       gap: 18px;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .header {
       padding: 20px;
     }
 
@@ -430,15 +539,8 @@ Having worked from the frontline through to senior executive leadership, Krista 
       width: 165px;
     }
 
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px 18px;
-    }
-
     .nav-links a {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 14px;
     }
 
     .hero {
@@ -455,12 +557,10 @@ Having worked from the frontline through to senior executive leadership, Krista 
       padding: 70px 8%;
     }
 
-    .thinking-content p {
+    .intro p:not(.eyebrow),
+    .about-preview p:not(.eyebrow),
+    .approach p:not(.eyebrow) {
       font-size: 16px;
-    }
-
-    .thinking-content .thinking-closing {
-      font-size: 18px;
     }
 
     .service-grid {
@@ -474,7 +574,7 @@ Having worked from the frontline through to senior executive leadership, Krista 
       margin-bottom: 18px;
     }
 
-    h3 {
+    .service h3 {
       font-size: 26px;
     }
 
