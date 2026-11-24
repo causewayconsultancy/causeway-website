@@ -13,68 +13,65 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <h1>The Experience Behind the Work</h1>
 
-      <div class="experience-intro">
-        <div class="founder-photo">
-          <img
-            src="/causeway-founder-headshot.png"
-            alt="Krista Chapman, founder of Causeway Decision Quality Consultancy."
-            loading="eager"
-          />
-        </div>
+      <div class="experience-content">
+        <img
+          class="founder-photo"
+          src="/causeway-founder-headshot.png"
+          alt="Krista Chapman, founder of Causeway Decision Quality Consultancy."
+          loading="eager"
+        />
 
-        <div class="experience-content">
-          <p>
-            Causeway was founded by Krista Chapman, whose perspective on
-            organizational challenges has been shaped by experience at every
-            level of complex organizations, from frontline healthcare to senior
-            executive leadership.
-          </p>
+        <p>
+          Causeway was founded by Krista Chapman, whose perspective on
+          organizational challenges has been shaped by experience at every
+          level of complex organizations, from frontline healthcare to senior
+          executive leadership.
+        </p>
 
-          <p>
-            Beginning her career on the frontlines of healthcare, Krista
-            developed a deep appreciation for the people, relationships, and
-            systems that shape care partnerships. Over the past 15+ years, she
-            has worked across clinical practice, operations, quality, and
-            organizational leadership, bringing a practical, systems-level
-            perspective to complex challenges.
-          </p>
+        <p>
+          Beginning her career on the frontlines of healthcare, Krista
+          developed a deep appreciation for the people, relationships, and
+          systems that shape care partnerships. Over the past 15+ years, she
+          has worked across clinical practice, operations, quality, and
+          organizational leadership, bringing a practical, systems-level
+          perspective to complex challenges.
+        </p>
 
-          <p>
-            Krista understands the importance of bringing together the
-            perspectives of people who shape, deliver, and experience services
-            every day. She believes improvement happens when people are genuinely
-            heard, different forms of expertise are valued, and decisions reflect
-            the experiences of those most affected. It requires creating the
-            conditions for open dialogue, shared understanding, and genuine
-            partnership, while connecting organizational priorities with the
-            realities of everyday practice and experience.
-          </p>
+        <p>
+          Krista understands the importance of bringing together the
+          perspectives of people who shape, deliver, and experience services
+          every day. She believes improvement happens when people are genuinely
+          heard, different forms of expertise are valued, and decisions reflect
+          the experiences of those most affected. It requires creating the
+          conditions for open dialogue, shared understanding, and genuine
+          partnership, while connecting organizational priorities with the
+          realities of everyday practice and experience.
+        </p>
 
-          <p>
-            Throughout her career, Krista has worked alongside executive teams,
-            multidisciplinary groups, and frontline professionals across Canada
-            and the United States. Her experience includes navigating complex
-            operational environments, leading organizational improvement
-            initiatives, advancing quality and performance, and helping
-            organizations make sense of change. She remains actively engaged in
-            the healthcare leadership community as a member of the Vancouver
-            Island Chapter Executive of the Canadian College of Health Leaders.
-          </p>
+        <p>
+          Throughout her career, Krista has worked alongside executive teams,
+          multidisciplinary groups, and frontline professionals across Canada
+          and the United States. Her experience includes navigating complex
+          operational environments, leading organizational improvement
+          initiatives, advancing quality and performance, and helping
+          organizations make sense of change. She remains actively engaged in
+          the healthcare leadership community as a member of the Vancouver
+          Island Chapter Executive of the Canadian College of Health Leaders.
+        </p>
 
-          <p>
-            A registered nurse and Certified Health Executive (CHE), Krista also
-            holds a Master of Precision Health (MPrecH) from the University of
-            Calgary's Cumming School of Medicine. She brings together practical
-            experience, systems-level thinking, evidence-informed decision-making,
-            and an appreciation for the human side of organizational change.
-          </p>
+        <p>
+          A registered nurse and Certified Health Executive (CHE), Krista also
+          holds a Master of Precision Health (MPrecH) from the University of
+          Calgary's Cumming School of Medicine. She brings together practical
+          experience, systems-level thinking, evidence-informed decision-making,
+          and an appreciation for the human side of organizational change.
+        </p>
 
-          <p>
-            Through Causeway, Krista works alongside organizations and leaders
-            to navigate complexity, uncover what matters, and find a clearer path
-            forward.
-          </p>
-        </div>
+        <p>
+          Through Causeway, Krista works alongside organizations and leaders
+          to navigate complexity, uncover what matters, and find a clearer path
+          forward.
+        </p>
       </div>
     </div>
   </section>
@@ -111,35 +108,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     font-size: clamp(38px, 5vw, 58px);
     font-weight: 400;
     line-height: 1.2;
-    margin: 20px 0 55px;
+    margin: 20px 0 45px;
     color: var(--slate);
   }
 
-  .experience-intro {
-    display: grid;
-    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.5fr);
-    gap: clamp(45px, 7vw, 100px);
-    align-items: start;
+  .experience-content {
+    max-width: 1050px;
+    margin-top: 0;
+    font-size: 17px;
+    line-height: 1.9;
   }
 
   .founder-photo {
-    width: 100%;
-    max-width: 400px;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-
-  .founder-photo img {
+    float: right;
     display: block;
-    width: 100%;
+    width: 31%;
+    max-width: 320px;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center top;
-  }
-
-  .experience-content {
-    max-width: 850px;
+    margin: 0 0 30px 45px;
+    border-radius: 4px;
   }
 
   .experience-content p {
@@ -148,24 +138,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     line-height: 1.9;
   }
 
+  /* TABLET */
+
   @media (max-width: 800px) {
     .experience.section {
       padding: 75px 0 !important;
     }
 
-    .experience-intro {
-      grid-template-columns: 1fr;
-      gap: 38px;
+    .experience-content {
+      max-width: 100%;
     }
 
     .founder-photo {
-      max-width: 340px;
-    }
-
-    .experience h1 {
-      margin-bottom: 40px;
+      width: 38%;
+      max-width: 280px;
+      margin-left: 30px;
+      margin-bottom: 22px;
     }
   }
+
+  /* MOBILE */
 
   @media (max-width: 550px) {
     .experience .section-inner {
@@ -176,12 +168,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       font-size: 16px !important;
     }
 
-    .founder-photo {
-      max-width: 100%;
+    .experience h1 {
+      margin-bottom: 32px;
     }
 
-    .founder-photo img {
-      aspect-ratio: 4 / 5;
+    .founder-photo {
+      float: none;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 32px;
     }
 
     .experience-content p {
