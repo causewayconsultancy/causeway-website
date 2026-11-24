@@ -1,0 +1,582 @@
+---
+const { title = "Causeway | Think deeper. Change smarter.", description = "Causeway Decision Quality Consultancy helps organizations navigate complexity, improve decision quality, and move forward with clarity." } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/" class="logo">
+        <img src="/causeway-logo.png" alt="Causeway Decision Quality Consultancy" />
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/philosophy">Philosophy</a>
+        <a href="/services">Services</a>
+        <a href="/approach">How I Work</a>
+        <a href="/experience">Experience</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>© {new Date().getFullYear()} Causeway Decision Quality Consultancy Inc.</p>
+      <p>Think deeper. Change smarter.</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+:root {
+    --slate: #23364A;
+    --coastal: #668A9A;
+    --stone: #C2BBA8;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    color: var(--slate);
+    background: var(--white);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: var(--white);
+  }
+
+  .logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+  }
+
+  .nav-links a {
+    color: var(--slate);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--coastal);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=85");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(24, 42, 55, 0.82),
+      rgba(24, 42, 55, 0.35)
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--coastal);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero .eyebrow {
+    color: var(--white);
+  }
+
+  h1,
+  h2 {
+    margin: 0 0 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: clamp(48px, 6vw, 76px);
+  }
+
+  h2 {
+    font-size: clamp(38px, 4.5vw, 56px);
+  }
+
+  .hero p {
+    max-width: 650px;
+    margin: 0 0 32px;
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+
+  .cta:hover {
+    background: var(--white);
+    color: var(--slate);
+  }
+
+  .section {
+    padding: 100px 10%;
+    background: var(--white);
+  }
+
+  .section-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .intro p:not(.eyebrow) {
+    max-width: 760px;
+    font-size: 18px;
+  }
+
+  /* Philosophy */
+
+  .philosophy {
+    background: #FFFFFF;
+  }
+
+  .philosophy-intro {
+    max-width: 850px;
+  }
+
+  .philosophy-intro p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 22px;
+  }
+
+  .philosophy-emphasis {
+    color: var(--coastal);
+    font-family: "Playfair Display", serif;
+    font-size: 26px !important;
+    line-height: 1.5 !important;
+    margin: 32px 0 !important;
+  }
+
+  .philosophy-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 35px;
+  }
+
+  .philosophy-list li {
+    position: relative;
+    padding: 10px 0 10px 28px;
+    border-bottom: 1px solid rgba(35, 54, 74, 0.12);
+    font-size: 16px;
+  }
+
+  .philosophy-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--coastal);
+    font-weight: 700;
+  }
+
+  .philosophy-quote {
+    margin: 45px 0;
+    padding: 25px 0 25px 28px;
+    border-left: 3px solid var(--coastal);
+    color: var(--slate);
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    line-height: 1.5;
+  }
+
+  /* Mission */
+
+  .mission {
+    margin-top: 90px;
+    padding: 55px 0;
+    border-top: 1px solid var(--stone);
+    border-bottom: 1px solid var(--stone);
+  }
+
+  .mission .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .mission-statement {
+    max-width: 900px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 3vw, 35px);
+    line-height: 1.5;
+  }
+
+  /* Three Pillars */
+
+  .pillars {
+    margin-top: 100px;
+  }
+
+  .pillars > h2,
+  .values > h2 {
+    margin-bottom: 45px;
+  }
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .pillar {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 26px;
+    background: var(--white);
+    border-top: 3px solid var(--coastal);
+  }
+
+  .pillar-number {
+    color: var(--coastal);
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  .pillar h3 {
+    margin: 0 0 8px;
+    font-size: 29px;
+  }
+
+  .pillar-tagline {
+    color: var(--coastal);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 22px;
+  }
+
+  .pillar > p:not(.pillar-tagline) {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+  }
+
+  .pillar .pillar-highlight {
+    margin-top: auto !important;
+    padding-top: 22px;
+    border-top: 1px solid var(--stone);
+    color: var(--slate);
+    font-weight: 700;
+  }
+
+  /* Core Values */
+
+  .values {
+    margin-top: 110px;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 65px;
+  }
+
+  .value {
+    padding: 28px 0;
+    border-top: 1px solid var(--stone);
+  }
+
+  .value h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+
+  .value p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .value:last-child {
+    grid-column: 1 / -1;
+    max-width: 490px;
+  }
+
+  /* Services */
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 70px;
+    margin-top: 75px;
+  }
+
+  .service {
+    border-top: 1px solid var(--stone);
+    padding-top: 28px;
+  }
+
+  .number {
+    display: block;
+    color: var(--coastal);
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+  }
+
+  .service h3 {
+    margin: 0 0 16px;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .service p {
+    max-width: 440px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* Bio */
+
+  .bio-section {
+    background: var(--white);
+  }
+
+  .bio {
+    max-width: 850px;
+  }
+
+  .bio p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 22px;
+  }
+
+  /* Approach */
+
+  .approach {
+    background: var(--white);
+  }
+
+  .approach p:not(.eyebrow) {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.85;
+    margin: 0 0 22px;
+  }
+
+  /* Contact */
+
+  .contact {
+    background: var(--slate);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .contact .eyebrow {
+    color: var(--stone);
+  }
+
+  .contact p:not(.eyebrow) {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+  }
+
+  /* Footer */
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 7%;
+    background: #1B2B3B;
+    color: var(--white);
+    font-size: 13px;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 900px) {
+    .pillar-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .pillar {
+      padding: 30px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .header {
+      flex-direction: column;
+      gap: 18px;
+      padding: 20px;
+    }
+
+    .logo img {
+      width: 165px;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 18px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 70px 8%;
+      background-position: center;
+    }
+
+    .hero p {
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 70px 8%;
+    }
+
+    .bio p {
+      font-size: 16px;
+    }
+
+    .philosophy-intro p {
+      font-size: 16px;
+    }
+
+    .philosophy-emphasis {
+      font-size: 23px !important;
+    }
+
+    .philosophy-quote {
+      font-size: 23px;
+      padding-left: 20px;
+    }
+
+    .mission {
+      margin-top: 65px;
+      padding: 40px 0;
+    }
+
+    .pillars {
+      margin-top: 70px;
+    }
+
+    .pillar {
+      padding: 25px;
+    }
+
+    .values {
+      margin-top: 75px;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .value:last-child {
+      grid-column: auto;
+      max-width: none;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      margin-top: 50px;
+    }
+
+    .number {
+      font-size: 56px;
+      margin-bottom: 18px;
+    }
+
+    .service h3 {
+      font-size: 26px;
+    }
+
+    .service p {
+      font-size: 15px;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 22px;
+    }
+  }
+</style>
