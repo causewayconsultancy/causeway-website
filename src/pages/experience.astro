@@ -13,67 +13,133 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <h1>The Experience Behind the Work</h1>
 
-      <div class="experience-content">
-        <p>
-          Causeway was founded by Krista Chapman, whose perspective on
-          organizational challenges has been shaped by experience at every
-          level of complex organizations, from frontline healthcare to senior
-          executive leadership.
-        </p>
+      <div class="experience-intro">
+        <div class="founder-photo">
+          <img
+            src="/causeway-founder-headshot.png"
+            alt="Krista Chapman, founder of Causeway Decision Quality Consultancy."
+            loading="eager"
+          />
+        </div>
 
-        <p>
-          Beginning her career on the frontlines of healthcare, Krista
-          developed a deep appreciation for the people, relationships, and
-          systems that shape care partnerships. Over the past 15+ years, she
-          has worked across clinical practice, operations, quality, and
-          organizational leadership, bringing a practical, systems-level
-          perspective to complex challenges.
-        </p>
+        <div class="experience-content">
+          <p>
+            Causeway was founded by Krista Chapman, whose perspective on
+            organizational challenges has been shaped by experience at every
+            level of complex organizations, from frontline healthcare to senior
+            executive leadership.
+          </p>
 
-        <p>
-          Krista understands the importance of bringing together the
-          perspectives of people who shape, deliver, and experience services
-          every day. She believes improvement happens when people are genuinely
-          heard, different forms of expertise are valued, and decisions reflect
-          the experiences of those most affected. It requires creating the
-          conditions for open dialogue, shared understanding, and genuine
-          partnership, while connecting organizational priorities with the
-          realities of everyday practice and experience.
-        </p>
+          <p>
+            Beginning her career on the frontlines of healthcare, Krista
+            developed a deep appreciation for the people, relationships, and
+            systems that shape care partnerships. Over the past 15+ years, she
+            has worked across clinical practice, operations, quality, and
+            organizational leadership, bringing a practical, systems-level
+            perspective to complex challenges.
+          </p>
 
-        <p>
-          Throughout her career, Krista has worked alongside executive teams,
-          multidisciplinary groups, and frontline professionals across Canada
-          and the United States. Her experience includes navigating complex
-          operational environments, leading organizational improvement
-          initiatives, advancing quality and performance, and helping
-          organizations make sense of change. She remains actively engaged in
-          the healthcare leadership community as a member of the Vancouver
-          Island Chapter Executive of the Canadian College of Health Leaders.
-        </p>
+          <p>
+            Krista understands the importance of bringing together the
+            perspectives of people who shape, deliver, and experience services
+            every day. She believes improvement happens when people are genuinely
+            heard, different forms of expertise are valued, and decisions reflect
+            the experiences of those most affected. It requires creating the
+            conditions for open dialogue, shared understanding, and genuine
+            partnership, while connecting organizational priorities with the
+            realities of everyday practice and experience.
+          </p>
 
-        <p>
-          A registered nurse and Certified Health Executive (CHE), Krista also
-          holds a Master of Precision Health (MPrecH) from the University of
-          Calgary's Cumming School of Medicine. She brings together practical
-          experience, systems-level thinking, evidence-informed decision-making,
-          and an appreciation for the human side of organizational change.
-        </p>
+          <p>
+            Throughout her career, Krista has worked alongside executive teams,
+            multidisciplinary groups, and frontline professionals across Canada
+            and the United States. Her experience includes navigating complex
+            operational environments, leading organizational improvement
+            initiatives, advancing quality and performance, and helping
+            organizations make sense of change. She remains actively engaged in
+            the healthcare leadership community as a member of the Vancouver
+            Island Chapter Executive of the Canadian College of Health Leaders.
+          </p>
 
-        <p>
-          Through Causeway, Krista works alongside organizations and leaders
-          to navigate complexity, uncover what matters, and find a clearer path
-          forward.
-        </p>
+          <p>
+            A registered nurse and Certified Health Executive (CHE), Krista also
+            holds a Master of Precision Health (MPrecH) from the University of
+            Calgary's Cumming School of Medicine. She brings together practical
+            experience, systems-level thinking, evidence-informed decision-making,
+            and an appreciation for the human side of organizational change.
+          </p>
+
+          <p>
+            Through Causeway, Krista works alongside organizations and leaders
+            to navigate complexity, uncover what matters, and find a clearer path
+            forward.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .experience.section {
+    width: 100%;
+    max-width: none;
+    padding: 100px 0 !important;
+    margin: 0;
+    background: #FFFFFF;
+  }
+
+  .experience .section-inner {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .experience .eyebrow {
+    display: block;
+    color: #668A9A;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+
+  .experience h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 20px 0 55px;
+    color: var(--slate);
+  }
+
+  .experience-intro {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.5fr);
+    gap: clamp(45px, 7vw, 100px);
+    align-items: start;
+  }
+
+  .founder-photo {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .founder-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+  }
+
   .experience-content {
-    max-width: 800px;
-    margin-top: 45px;
+    max-width: 850px;
   }
 
   .experience-content p {
@@ -82,9 +148,40 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     line-height: 1.9;
   }
 
-  @media (max-width: 700px) {
-    .experience-content {
-      margin-top: 32px;
+  @media (max-width: 800px) {
+    .experience.section {
+      padding: 75px 0 !important;
+    }
+
+    .experience-intro {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
+
+    .founder-photo {
+      max-width: 340px;
+    }
+
+    .experience h1 {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .experience .section-inner {
+      width: 88%;
+    }
+
+    .experience .eyebrow {
+      font-size: 16px !important;
+    }
+
+    .founder-photo {
+      max-width: 100%;
+    }
+
+    .founder-photo img {
+      aspect-ratio: 4 / 5;
     }
 
     .experience-content p {
