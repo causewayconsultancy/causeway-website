@@ -20,44 +20,55 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="philosophy-intro section">
-    <div class="section-inner intro-grid">
-      <div class="intro-heading">
-        <p class="eyebrow">The Causeway Philosophy</p>
-        <h2>Before finding the way forward, we need to understand where we are.</h2>
+    <div class="section-inner">
+      <div class="intro-grid">
+        <div class="intro-heading">
+          <p class="eyebrow">The Causeway Philosophy</p>
+          <h2>Before finding the way forward, we need to understand where we are.</h2>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            Organizations are filled with smart people, good intentions,
+            and a desire to make things better.
+          </p>
+
+          <p>
+            Yet many still struggle to create lasting change because
+            they move from problem to solution too quickly.
+          </p>
+
+          <p class="emphasis">
+            I believe improvement begins with understanding.
+          </p>
+
+          <p>
+            My work helps organizations slow down enough to engage the
+            people closest to the work, ask better questions, understand
+            what is truly driving the challenge, use evidence to create
+            clarity, and make decisions with confidence.
+          </p>
+
+          <blockquote>
+            Even the best solution cannot succeed if we never truly
+            understood the problem.
+          </blockquote>
+
+          <p>
+            The goal goes beyond simply solving today's challenges.
+            It is to help organizations build the confidence, capability,
+            and culture to make better decisions long after an engagement ends.
+          </p>
+        </div>
       </div>
 
-      <div class="intro-copy">
-        <p>
-          Organizations are filled with smart people, good intentions,
-          and a desire to make things better.
-        </p>
-
-        <p>
-          Yet many still struggle to create lasting change because
-          they move from problem to solution too quickly.
-        </p>
-
-        <p class="emphasis">
-          I believe improvement begins with understanding.
-        </p>
-
-        <p>
-          My work helps organizations slow down enough to engage the
-          people closest to the work, ask better questions, understand
-          what is truly driving the challenge, use evidence to create
-          clarity, and make decisions with confidence.
-        </p>
-
-        <blockquote>
-          Even the best solution cannot succeed if we never truly
-          understood the problem.
-        </blockquote>
-
-        <p>
-          The goal goes beyond simply solving today's challenges.
-          It is to help organizations build the confidence, capability,
-          and culture to make better decisions long after an engagement ends.
-        </p>
+      <!-- PHILOSOPHY IMAGE -->
+      <div class="philosophy-image">
+        <img
+          src="/causeway-philosophy-top.png"
+          alt="A diverse group of colleagues collaborating, with a woman speaking and a man listening attentively."
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -151,6 +162,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Better decisions depend not only on what we do,
           but on how we work together.
         </p>
+      </div>
+
+      <!-- CORE VALUES IMAGE -->
+      <div class="values-image">
+        <img
+          src="/causeway-values.png"
+          alt="A diverse group of colleagues having a relaxed discussion in a welcoming meeting space."
+          loading="lazy"
+        />
       </div>
 
       <div class="values-grid">
@@ -317,6 +337,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       color: var(--slate);
     }
 
+    /* PHILOSOPHY IMAGE */
+
+    .philosophy-image {
+      width: 100%;
+      margin-top: 75px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .philosophy-image img {
+      display: block;
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      object-position: center 45%;
+    }
+
     /* MISSION */
 
     .mission {
@@ -450,6 +487,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       margin: 0 auto;
     }
 
+    /* CORE VALUES IMAGE */
+
+    .values-image {
+      width: 100%;
+      margin: 0 0 65px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .values-image img {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center 45%;
+    }
+
     .values-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -492,6 +546,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         gap: 35px;
       }
 
+      .philosophy-image {
+        margin-top: 50px;
+      }
+
+      .philosophy-image img {
+        height: 350px;
+      }
+
       .pillar-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -499,6 +561,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       .values-grid {
         column-gap: 40px;
+      }
+
+      .values-image img {
+        height: 320px;
       }
 
       .pillars.section,
@@ -527,6 +593,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       .pillars .section-inner,
       .values .section-inner {
         width: 88% !important;
+      }
+
+      .philosophy-image {
+        margin-top: 35px;
+      }
+
+      .philosophy-image img {
+        height: 250px;
+      }
+
+      .values-image {
+        margin-bottom: 45px;
+      }
+
+      .values-image img {
+        height: 250px;
       }
 
       .values-grid {
