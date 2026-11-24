@@ -182,7 +182,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <svg viewBox="0 0 48 48" fill="none">
               <path d="M5 11h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4h-7l-6 5v-5H5a4 4 0 0 1-4-4V15a4 4 0 0 1 4-4Z"/>
               <path d="M27 18h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4h-2v5l-7-5h-3"/>
-              <path d="M25 29s-7-4.4-7-8.4a3.8 3.8 0 0 1 7-2.1 3.8 3.8 0 0 1 7 2.1c0 4-7 8.4-7 8.4Z" fill="#668A9A" stroke="#668A9A" strokeWidth="1.5"/>
+              <path d="M25 29s-7-4.4-7-8.4a3.8 3.8 0 0 1 7-2.1 3.8 3.8 0 0 1 7 2.1c0 4-7 8.4-7 8.4Z" fill="#668A9A" stroke="#668A9A" stroke-width="1.5"/>
             </svg>
           </div>
           <h3>Psychological safety enables better decisions</h3>
@@ -211,13 +211,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <article class="value">
           <div class="value-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none">
-              <path d="m12 12 24 5M12 12l4 25M36 17 16 37M36 17l-4 20M16 37l16 0"/>
+              <path d="M17 12h14M36 17v14M31 36H17M12 31V17"/>
               <circle cx="12" cy="12" r="5"/>
-              <circle cx="36" cy="17" r="5"/>
-              <circle cx="16" cy="37" r="5"/>
-              <circle cx="32" cy="37" r="5"/>
-              <circle cx="24" cy="24" r="4"/>
-              <path d="m12 12 12 12m12-7L24 24m-8 13 8-13m8 13-8-13"/>
+              <circle cx="36" cy="12" r="5"/>
+              <circle cx="36" cy="36" r="5"/>
+              <circle cx="12" cy="36" r="5"/>
             </svg>
           </div>
           <h3>Systems over symptoms</h3>
@@ -231,8 +229,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <article class="value">
           <div class="value-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none">
-              <path d="M6 40h36M10 40V29h9v11M19 29V19h10v21M29 19V9h9v31"/>
-              <path d="m12 22 9-8 7 2 10-10M31 6h7v7"/>
+              <path d="M6 41h36"/>
+              <path d="M10 41V29h8v12M21 41V21h8v20M32 41V13h8v28"/>
+              <path d="m10 22 11-9 8 2L40 4"/>
+              <path d="M31 4h9v9"/>
             </svg>
           </div>
           <h3>Build capacity, not dependency</h3>
@@ -524,14 +524,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     .values-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 90px;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      column-gap: 45px;
       row-gap: 55px;
     }
 
     .value {
+      grid-column: span 2;
       border-top: 1px solid var(--stone);
       padding-top: 28px;
+    }
+
+    /* Centre the final two values on the second row */
+
+    .value:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .value:nth-child(5) {
+      grid-column: 4 / span 2;
     }
 
     /* VALUE ICONS */
@@ -592,7 +603,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       }
 
       .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 40px;
+      }
+
+      .value,
+      .value:nth-child(4),
+      .value:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .value:nth-child(5) {
+        grid-column: 1 / -1;
+        width: calc(50% - 20px);
+        justify-self: center;
       }
 
       .pillars.section,
@@ -634,6 +658,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       .values-grid {
         grid-template-columns: 1fr;
         row-gap: 38px;
+      }
+
+      .value,
+      .value:nth-child(4),
+      .value:nth-child(5) {
+        grid-column: 1;
+        width: 100%;
       }
 
       .mission {
