@@ -225,8 +225,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(90deg, rgba(20, 37, 51, 0.88), rgba(20, 37, 51, 0.2)),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85");
+        linear-gradient(
+          90deg,
+          rgba(20, 37, 51, 0.88),
+          rgba(20, 37, 51, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85");
       background-size: cover;
       background-position: center 55%;
     }
@@ -258,23 +262,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       line-height: 1.8;
     }
 
+    /* PHILOSOPHY INTRO */
+
     .philosophy-intro {
-      padding-top: 110px;
-      padding-bottom: 110px;
+      padding: 110px 0;
     }
 
-    .philosophy-intro .section-inner {
-  max-width: 1200px;
-  width: 88%;
-  margin: 0 auto;
-}
+    .philosophy-intro .section-inner,
+    .pillars .section-inner,
+    .values .section-inner {
+      width: min(1200px, 88%);
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 75px;
-  align-items: start;
-}
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(45px, 7vw, 95px);
+      align-items: start;
+    }
 
     .intro-heading h2 {
       font-family: "Playfair Display", serif;
@@ -308,9 +315,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       color: var(--slate);
     }
 
+    /* MISSION */
+
     .mission {
-      background: var(--slate);
-      color: var(--off-white);
+      background: #23364A;
+      color: #F5F2EA;
       padding: 95px 6%;
     }
 
@@ -320,10 +329,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
 
     .mission .eyebrow {
-      color: var(--stone);
+      color: #C2BBA8;
     }
 
     .mission-statement {
+      color: #F5F2EA;
       max-width: 950px;
       margin: 25px 0 0;
       font-family: "Playfair Display", serif;
@@ -332,9 +342,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       font-weight: 400;
     }
 
+    /* THREE PILLARS */
+
     .pillars {
-      padding-top: 110px;
-      padding-bottom: 110px;
+      padding: 110px 0;
     }
 
     .section-heading {
@@ -356,7 +367,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     .pillar-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 45px;
     }
 
@@ -406,15 +417,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       line-height: 1.6;
     }
 
+    /* CORE VALUES */
+
     .values {
       background: var(--off-white);
-      padding-top: 105px;
-      padding-bottom: 110px;
+      padding: 105px 0 110px;
     }
 
     .values-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       column-gap: 90px;
       row-gap: 55px;
     }
@@ -433,6 +445,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       font-size: 24px;
       margin-bottom: 15px;
     }
+
+    /* TABLET */
 
     @media (max-width: 800px) {
       .philosophy-hero {
@@ -461,6 +475,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       }
     }
 
+    /* MOBILE */
+
     @media (max-width: 550px) {
       .philosophy-hero {
         min-height: 480px;
@@ -481,6 +497,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       .mission {
         padding: 70px 7%;
+      }
+
+      .intro-heading h2 {
+        font-size: 34px;
       }
     }
   </style>
