@@ -8,7 +8,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="The Causeway philosophy: understand the problem, bring perspectives together, and make better decisions."
 >
   <section class="philosophy-hero">
-    <div class="hero-image"></div>
     <div class="hero-content">
       <p class="eyebrow">What Guides the Work</p>
       <h1>Better decisions<br />begin with understanding.</h1>
@@ -211,34 +210,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <style>
+    /* HERO */
+
     .philosophy-hero {
       position: relative;
       min-height: 570px;
       display: flex;
       align-items: center;
       overflow: hidden;
-      background: #23364A;
-      color: #F5F2EA;
-    }
-
-    .hero-image {
-      position: absolute;
-      inset: 0;
-      background-image:
+      background:
         linear-gradient(
-          90deg,
-          rgba(20, 37, 51, 0.88),
-          rgba(20, 37, 51, 0.25)
-        ),
-        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85");
-      background-size: cover;
-      background-position: center 55%;
+          115deg,
+          #23364A 0%,
+          #304B60 60%,
+          #668A9A 100%
+        );
+      color: #F5F2EA;
     }
 
     .philosophy-hero .hero-content {
       position: relative;
       z-index: 1;
-      width: min(1100px, 88%);
+      width: 86%;
+      max-width: 1450px;
       margin: 0 auto;
       padding: 100px 0;
     }
@@ -260,35 +254,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       max-width: 620px;
       font-size: 18px;
       line-height: 1.8;
+      color: #F5F2EA;
     }
 
     /* PHILOSOPHY INTRO */
 
-    .philosophy-intro {
-      padding: 110px 0;
+    .philosophy-intro.section {
+      width: 100%;
+      max-width: none !important;
+      padding: 110px 0 !important;
+      margin: 0;
+      background: #FFFFFF;
     }
 
-    .philosophy-intro .section-inner,
-    .pillars .section-inner,
-    .values .section-inner {
-      width: min(1200px, 88%);
-      margin-left: auto;
-      margin-right: auto;
+    .philosophy-intro .section-inner {
+      width: 92% !important;
+      max-width: 1500px !important;
+      margin: 0 auto !important;
+      padding: 0;
     }
 
     .intro-grid {
       display: grid;
       grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: clamp(45px, 7vw, 95px);
+      gap: clamp(50px, 7vw, 110px);
       align-items: start;
     }
 
     .intro-heading h2 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(32px, 4vw, 46px);
+      font-size: clamp(34px, 4vw, 49px);
       font-weight: 400;
       line-height: 1.3;
-      margin-top: 20px;
+      margin: 20px 0 0;
+    }
+
+    .intro-copy {
+      min-width: 0;
+      max-width: 850px;
     }
 
     .intro-copy p {
@@ -318,13 +321,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     /* MISSION */
 
     .mission {
+      width: 100%;
+      margin: 0;
+      padding: 95px 7%;
       background: #23364A;
       color: #F5F2EA;
-      padding: 95px 6%;
+      border: none;
     }
 
     .mission-inner {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -333,9 +339,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
 
     .mission-statement {
-      color: #F5F2EA;
-      max-width: 950px;
+      display: block;
+      width: 100%;
+      max-width: 1100px;
       margin: 25px 0 0;
+      color: #F5F2EA !important;
       font-family: "Playfair Display", serif;
       font-size: clamp(29px, 4vw, 46px);
       line-height: 1.45;
@@ -344,12 +352,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     /* THREE PILLARS */
 
-    .pillars {
-      padding: 110px 0;
+    .pillars.section {
+      width: 100%;
+      max-width: none;
+      padding: 110px 0 !important;
+      margin: 0;
+      background: #FFFFFF;
+    }
+
+    .pillars .section-inner {
+      width: 88%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .section-heading {
-      max-width: 720px;
+      max-width: 800px;
       margin-bottom: 65px;
     }
 
@@ -419,9 +437,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     /* CORE VALUES */
 
-    .values {
-      background: var(--off-white);
-      padding: 105px 0 110px;
+    .values.section {
+      width: 100%;
+      max-width: none;
+      padding: 105px 0 110px !important;
+      margin: 0;
+      background: #F5F2EA;
+    }
+
+    .values .section-inner {
+      width: 88%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .values-grid {
@@ -453,6 +480,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         min-height: 500px;
       }
 
+      .philosophy-intro.section {
+        padding: 75px 0 !important;
+      }
+
+      .philosophy-intro .section-inner {
+        width: 88% !important;
+      }
+
       .intro-grid {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -467,11 +502,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         column-gap: 40px;
       }
 
-      .philosophy-intro,
-      .pillars,
-      .values {
-        padding-top: 75px;
-        padding-bottom: 75px;
+      .pillars.section,
+      .values.section {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
       }
     }
 
@@ -488,6 +522,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       .philosophy-hero .hero-content > p:last-child {
         font-size: 16px;
+      }
+
+      .philosophy-intro .section-inner,
+      .pillars .section-inner,
+      .values .section-inner {
+        width: 88% !important;
       }
 
       .values-grid {
