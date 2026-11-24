@@ -1,0 +1,53 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Approach | Causeway"
+  description="Discover how Causeway works alongside organizations to navigate complexity, ask better questions, and find a clearer path forward."
+>
+  <section class="approach section">
+    <div class="section-inner">
+      <p class="eyebrow">How I Work</p>
+
+      <h1>Comfortable in the grey.<br />Focused on the way forward.</h1>
+
+      <div class="approach-content">
+        <p>
+          I bring curiosity, structure, and an open mind to complex challenges.
+          I listen carefully, ask thoughtful questions, explore different
+          perspectives, and work alongside people to uncover what matters.
+        </p>
+
+        <p>
+          The goal isn't simply to find an answer. It's to make better decisions
+          about what comes next.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .approach-content {
+    max-width: 760px;
+    margin-top: 45px;
+  }
+
+  .approach-content p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  @media (max-width: 700px) {
+    .approach-content {
+      margin-top: 32px;
+    }
+
+    .approach-content p {
+      font-size: 16px;
+    }
+  }
+</style>
