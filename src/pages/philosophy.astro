@@ -32,28 +32,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             Organizations are filled with smart people, good intentions,
             and a desire to make things better.
           </p>
-
           <p>
             Yet many still struggle to create lasting change because
             they move from problem to solution too quickly.
           </p>
-
           <p class="emphasis">
             I believe improvement begins with understanding.
           </p>
-
           <p>
             My work helps organizations slow down enough to engage the
             people closest to the work, ask better questions, understand
             what is truly driving the challenge, use evidence to create
             clarity, and make decisions with confidence.
           </p>
-
           <blockquote>
             Even the best solution cannot succeed if we never truly
             understood the problem.
           </blockquote>
-
           <p>
             The goal goes beyond simply solving today's challenges.
             It is to help organizations build the confidence, capability,
@@ -62,7 +57,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
 
-      <!-- PHILOSOPHY IMAGE -->
       <div class="philosophy-image">
         <img
           src="/causeway-philosophy-top.png"
@@ -78,7 +72,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <p class="eyebrow">Our Mission</p>
       <p class="mission-statement">
         Improve the quality of organizational decisions through
-        thoughtful stakeholder engagement, evidence informed thinking, and disciplined discovery.
+        thoughtful stakeholder engagement, evidence-informed thinking,
+        and disciplined discovery.
       </p>
     </div>
   </section>
@@ -164,7 +159,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <!-- CORE VALUES IMAGE -->
       <div class="values-image">
         <img
           src="/causeway-values.png"
@@ -237,13 +231,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       display: flex;
       align-items: center;
       overflow: hidden;
-      background:
-        linear-gradient(
-          115deg,
-          #23364A 0%,
-          #304B60 60%,
-          #668A9A 100%
-        );
+      background: linear-gradient(
+        115deg,
+        #23364A 0%,
+        #304B60 60%,
+        #668A9A 100%
+      );
       color: #F5F2EA;
     }
 
@@ -256,8 +249,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       padding: 100px 0;
     }
 
-    .philosophy-hero .eyebrow {
+    /* SECTION LABELS */
+
+    .philosophy-hero .eyebrow,
+    .philosophy-intro .eyebrow,
+    .mission .eyebrow,
+    .pillars .eyebrow,
+    .values .eyebrow {
+      display: block;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.15em !important;
+      line-height: 1.5;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+
+    .philosophy-hero .eyebrow,
+    .mission .eyebrow {
       color: #C2BBA8;
+    }
+
+    .philosophy-intro .eyebrow,
+    .pillars .eyebrow,
+    .values .eyebrow {
+      color: #668A9A;
     }
 
     .philosophy-hero h1 {
@@ -368,10 +384,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     .mission-inner {
       max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .mission .eyebrow {
-      color: #C2BBA8;
     }
 
     .mission-statement {
@@ -486,8 +498,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       max-width: 1400px;
       margin: 0 auto;
     }
-
-    /* CORE VALUES IMAGE */
 
     .values-image {
       width: 100%;
@@ -622,6 +632,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       .intro-heading h2 {
         font-size: 34px;
+      }
+
+      .philosophy-hero .eyebrow,
+      .philosophy-intro .eyebrow,
+      .mission .eyebrow,
+      .pillars .eyebrow,
+      .values .eyebrow {
+        font-size: 16px !important;
       }
     }
   </style>
