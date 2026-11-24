@@ -1,0 +1,42 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact | Causeway"
+  description="Start a conversation with Causeway Decision Quality Consultancy."
+>
+  <section class="contact section">
+    <div class="section-inner">
+      <p class="eyebrow">Start a Conversation</p>
+
+      <h1>Have a complex challenge?<br />Let's work through it.</h1>
+
+      <p class="contact-intro">
+        Whether you're navigating a difficult decision, exploring a new
+        direction, or trying to make sense of a complex challenge, I'd welcome
+        the conversation.
+      </p>
+
+      <a href="mailto:kchapman@causewayconsultancy.ca" class="cta">
+        kchapman@causewayconsultancy.ca
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-intro {
+    max-width: 650px;
+    margin: 30px 0 35px;
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  @media (max-width: 700px) {
+    .contact-intro {
+      font-size: 15px;
+    }
+  }
+</style>
