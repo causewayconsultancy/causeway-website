@@ -6,29 +6,76 @@ const services = [
   {
     number: "01",
     title: "Discovery & Problem Definition",
-    description: "Getting beneath the surface to understand the real challenge, ask better questions, and identify what matters most."
+    introduction:
+      "Getting beneath the surface to understand the real challenge, ask better questions, and identify what matters most.",
+    details: [
+      "Organizational discovery and current-state assessments",
+      "Problem identification and definition",
+      "Root-cause analysis and systems thinking",
+      "Environmental scanning and evidence gathering",
+      "Opportunity identification and prioritization",
+      "Research, synthesis, and insight development"
+    ],
+    outcome:
+      "A clearer understanding of the challenge, its underlying causes, and where attention can make the greatest difference."
   },
   {
     number: "02",
     title: "Strategic Thinking & Decision Support",
-    description: "Bringing structure to complexity, connecting evidence and insight, and helping leaders make thoughtful, informed decisions."
+    introduction:
+      "Bringing structure to complexity, connecting evidence and insight, and helping leaders make thoughtful, informed decisions.",
+    details: [
+      "Strategic planning and priority setting",
+      "Strategic and operational advisory",
+      "Options analysis and evaluation",
+      "Evidence-informed recommendations",
+      "Business cases and investment rationale",
+      "Risk, opportunity, and impact assessment",
+      "Performance measurement and quality frameworks"
+    ],
+    outcome:
+      "Greater clarity on available options, stronger decision-making, and a more deliberate path forward."
   },
   {
     number: "03",
     title: "Facilitation & Stakeholder Engagement",
-    description: "Bringing people and perspectives together to build shared understanding and support better decisions."
+    introduction:
+      "Bringing people and perspectives together to build shared understanding, challenge assumptions, and support better decisions.",
+    details: [
+      "Executive and leadership team facilitation",
+      "Stakeholder engagement and consultation",
+      "Cross-functional collaboration",
+      "Strategic and operational workshops",
+      "Facilitated discovery and problem-solving",
+      "Consensus-building and organizational alignment",
+      "Workshop design and delivery"
+    ],
+    outcome:
+      "Meaningful participation, stronger alignment, and decisions informed by diverse perspectives and lived experience."
   },
   {
     number: "04",
     title: "Change & Implementation",
-    description: "Turning insight into action through practical planning, thoughtful change, and sustainable implementation."
+    introduction:
+      "Turning insight into action through practical planning, thoughtful change, and sustainable implementation.",
+    details: [
+      "Implementation planning and support",
+      "Organizational change management",
+      "Digital health strategy and enablement",
+      "Technology adoption and workflow integration",
+      "Service model and process improvement",
+      "Implementation readiness and impact assessments",
+      "Evaluation, performance monitoring, and continuous improvement"
+    ],
+    outcome:
+      "More purposeful implementation, stronger adoption, and meaningful improvements that can be sustained over time."
   }
 ];
 ---
 
 <BaseLayout
   title="Services | Causeway"
-  description="Explore Causeway's services in discovery, decision support, facilitation, stakeholder engagement, and organizational change."
+  description="Explore Causeway's services in discovery, strategic thinking, decision support, facilitation, stakeholder engagement, and organizational change."
 >
   <section class="services section">
     <div class="section-inner">
@@ -36,25 +83,83 @@ const services = [
 
       <h1>Make sense of the messy.<br />Move toward what matters.</h1>
 
+      <div class="services-intro">
+        <p>
+          Every organization faces challenges that aren't always easy to define,
+          untangle, or solve. We help make sense of complexity, bring the right
+          perspectives together, and create the conditions for better decisions
+          and meaningful change.
+        </p>
+        <p>
+          Whether the need is focused discovery, strategic guidance, facilitated
+          collaboration, or support putting decisions into action, our work is
+          shaped around your context, your challenges, and the outcomes that matter.
+        </p>
+      </div>
+
       <div class="service-grid">
         {services.map((service) => (
           <article class="service">
             <span class="number">{service.number}</span>
+
             <h2>{service.title}</h2>
-            <p>{service.description}</p>
+
+            <p class="service-introduction">
+              {service.introduction}
+            </p>
+
+            <div class="service-details">
+              <h3>How we can help</h3>
+              <ul>
+                {service.details.map((detail) => (
+                  <li>{detail}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="service-outcome">
+              <h3>What this makes possible</h3>
+              <p>{service.outcome}</p>
+            </div>
           </article>
         ))}
+      </div>
+
+      <div class="services-closing">
+        <p class="eyebrow">A Thoughtful Approach</p>
+        <h2>Not every challenge needs the same approach.</h2>
+        <p>
+          Our services are not a prescribed sequence or a one-size-fits-all
+          solution. Engagements can be focused on a specific challenge or
+          bring together several areas of expertise. We start by understanding
+          where you are, what you're working toward, and what will make the
+          greatest difference.
+        </p>
+        <p class="closing-emphasis">
+          The right next step starts with the right conversation.
+        </p>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .services-intro {
+    max-width: 780px;
+    margin-top: 38px;
+  }
+
+  .services-intro p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 18px;
+  }
+
   .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 65px 70px;
-    margin-top: 75px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px 70px;
+    margin-top: 85px;
   }
 
   .service {
@@ -74,25 +179,109 @@ const services = [
   }
 
   .service h2 {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     font-family: "Playfair Display", serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 1.3;
   }
 
-  .service p {
-    max-width: 440px;
-    margin: 0;
+  .service-introduction {
+    max-width: 480px;
+    margin: 0 0 30px;
     font-size: 16px;
     line-height: 1.8;
   }
 
+  .service-details h3,
+  .service-outcome h3 {
+    margin: 0 0 14px;
+    color: var(--coastal);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .service-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-details li {
+    position: relative;
+    padding-left: 19px;
+    margin-bottom: 11px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .service-details li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--stone);
+  }
+
+  .service-outcome {
+    border-top: 1px solid var(--stone);
+    margin-top: 28px;
+    padding-top: 22px;
+  }
+
+  .service-outcome p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .services-closing {
+    max-width: 780px;
+    margin-top: 110px;
+    padding-top: 45px;
+    border-top: 1px solid var(--stone);
+  }
+
+  .services-closing h2 {
+    max-width: 600px;
+    margin: 0 0 22px;
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .services-closing > p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .services-closing .closing-emphasis {
+    margin-top: 28px;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--coastal);
+  }
+
   @media (max-width: 700px) {
+    .services-intro {
+      margin-top: 28px;
+    }
+
+    .services-intro p {
+      font-size: 15px;
+    }
+
     .service-grid {
       grid-template-columns: 1fr;
-      gap: 48px;
-      margin-top: 50px;
+      gap: 58px;
+      margin-top: 55px;
     }
 
     .number {
@@ -104,8 +293,21 @@ const services = [
       font-size: 26px;
     }
 
-    .service p {
+    .service-introduction {
       font-size: 15px;
+    }
+
+    .service-details li {
+      font-size: 14px;
+    }
+
+    .services-closing {
+      margin-top: 75px;
+      padding-top: 35px;
+    }
+
+    .services-closing h2 {
+      font-size: 27px;
     }
   }
 </style>
