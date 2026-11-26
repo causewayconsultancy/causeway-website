@@ -274,6 +274,86 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
 
+    <!-- EXPERIENCE AND PERSPECTIVE -->
+
+    <section class="experience">
+      <div class="section-inner">
+
+        <div class="experience-grid">
+
+          <div class="experience-content">
+
+            <p class="eyebrow">A Perspective Across the Organization</p>
+
+            <h2>Understanding the organization means understanding the people within it.</h2>
+
+            <p>
+              Having worked across the organization, from frontline
+              service delivery to executive leadership, I bring an
+              appreciation for the different perspectives, pressures,
+              and priorities that shape how organizations work.
+            </p>
+
+            <p>
+              I understand the realities of day-to-day operations,
+              the challenges faced by those leading teams, and the
+              broader considerations that influence executive
+              decision-making.
+            </p>
+
+            <p>
+              Just as importantly, I recognize that meaningful change
+              depends on connecting these perspectives, creating space
+              for different voices to be heard, and ensuring decisions
+              reflect the realities of the people expected to bring
+              them to life.
+            </p>
+
+            <p class="experience-highlight">
+              I can sit at the executive table, engage with operational
+              leaders, and have an equally meaningful conversation with
+              the people delivering services on the ground.
+            </p>
+
+          </div>
+
+
+          <div class="education-content">
+
+            <p class="eyebrow">Education & Applied Learning</p>
+
+            <h2>Curiosity grounded in evidence and innovation.</h2>
+
+            <p>
+              My Master of Precision Health from the University of
+              Calgary's Cumming School of Medicine included a
+              specialization in Innovation and Entrepreneurship.
+              The program strengthened my interest in how organizations
+              identify challenges, explore new possibilities, and
+              translate ideas into meaningful improvements.
+            </p>
+
+            <p>
+              For my capstone project, I co-created a micro-credential
+              in Problem Identification in partnership with Alberta
+              Health Services' Innovation and Business Intelligence
+              team and the Cumming School of Medicine.
+            </p>
+
+            <p>
+              The work reflected a central belief that continues
+              to shape my approach: better solutions begin with
+              a deeper understanding of the problem.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- CLOSING -->
 
     <section class="approach-closing">
@@ -521,6 +601,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
 
+  /* EXPERIENCE AND EDUCATION */
+
+  .experience {
+    background: var(--cream);
+    padding: 100px 0;
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: start;
+  }
+
+  .experience-content h2,
+  .education-content h2 {
+    max-width: 500px;
+  }
+
+  .experience-content p:not(.eyebrow),
+  .education-content p:not(.eyebrow) {
+    margin-bottom: 20px;
+  }
+
+  .experience-highlight {
+    border-left: 3px solid var(--coastal);
+    padding-left: 22px;
+    font-weight: 600;
+    color: var(--slate);
+    margin-top: 28px;
+  }
+
+  .education-content {
+    padding-left: 35px;
+    border-left: 1px solid var(--stone);
+  }
+
+
   /* CLOSING */
 
   .approach-closing {
@@ -594,6 +712,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       height: 450px;
     }
 
+    .experience-grid {
+      gap: 40px;
+    }
+
+    .education-content {
+      padding-left: 25px;
+    }
+
   }
 
 
@@ -655,6 +781,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     .principle {
       padding: 25px;
+    }
+
+    .experience {
+      padding: 70px 0;
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .education-content {
+      padding-left: 0;
+      padding-top: 35px;
+      border-left: none;
+      border-top: 1px solid var(--stone);
     }
 
     .approach-closing {
