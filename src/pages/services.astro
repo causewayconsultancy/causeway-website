@@ -114,65 +114,6 @@ const services = [
       </div>
     </div>
 
-    <!-- THE CHALLENGES ORGANIZATIONS FACE -->
-    <section class="challenges-section">
-      <div class="challenges-inner">
-        <div class="challenges-heading">
-          <p class="eyebrow">Where the Work Often Begins</p>
-          <h2>Sometimes the challenge is clear. Sometimes finding it is the work.</h2>
-          <p>
-            Organizations reach out to Causeway at different points in a
-            challenge.<br />
-            You might recognize one of these situations, or be working through something that is harder to put into words.
-          </p>
-        </div>
-
-        <div class="challenges-grid">
-          <article class="challenge-card">
-            <h3>The problem isn't clear</h3>
-            <ul>
-              <li>Something isn't working, but there isn't agreement about why.</li>
-              <li>Efforts are focused on symptoms rather than underlying causes.</li>
-              <li>You know something needs to change, but aren't sure where to start.</li>
-            </ul>
-          </article>
-
-          <article class="challenge-card">
-            <h3>People aren't aligned</h3>
-            <ul>
-              <li>Different teams or stakeholders see the challenge in different ways.</li>
-              <li>Competing priorities make it difficult to move forward.</li>
-              <li>Decisions are being made without the perspectives of the people affected.</li>
-            </ul>
-          </article>
-
-          <article class="challenge-card">
-            <h3>Progress has stalled</h3>
-            <ul>
-              <li>Previous initiatives haven't delivered the outcomes you expected.</li>
-              <li>Plans lose momentum between strategy and implementation.</li>
-              <li>Time and resources are being invested without clarity on what will make the biggest difference.</li>
-            </ul>
-          </article>
-
-          <article class="challenge-card">
-            <h3>Change feels complex</h3>
-            <ul>
-              <li>New technology or processes aren't being adopted as intended.</li>
-              <li>Operational challenges are affecting quality, performance, or service delivery.</li>
-              <li>Important decisions need to be made with incomplete information.</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="challenges-note">
-          These are starting points, not prerequisites. You don't need to
-          have the problem figured out before reaching out. Helping you
-          understand the challenge is part of the work.
-        </p>
-      </div>
-    </section>
-
     <!-- SERVICES -->
     <div class="service-grid">
       {services.map((service, index) => (
@@ -206,6 +147,92 @@ const services = [
         </article>
       ))}
     </div>
+
+    <!-- CLIENT OUTPUTS -->
+    <section class="outputs-section">
+      <div class="outputs-inner">
+
+        <div class="outputs-heading">
+          <p class="eyebrow">What You Can Expect to Take Away</p>
+
+          <h2>Practical outputs.<br />Clearer direction.</h2>
+
+          <p>
+            The value of an engagement should extend beyond the conversations
+            themselves. Depending on the challenge and scope of the work,
+            Causeway helps organizations develop tangible outputs that create
+            clarity, support decisions, and make progress possible.
+          </p>
+        </div>
+
+        <div class="outputs-grid">
+
+          <article class="output-card">
+            <span class="output-number">01</span>
+            <h3>A clearer understanding of the problem</h3>
+            <p>
+              Get beneath the surface to understand what is really happening
+              and what is driving the challenge.
+            </p>
+            <ul>
+              <li>Discovery findings and insights</li>
+              <li>Root-cause analysis</li>
+              <li>A shared definition of the problem</li>
+            </ul>
+          </article>
+
+          <article class="output-card">
+            <span class="output-number">02</span>
+            <h3>A structured way forward</h3>
+            <p>
+              Bring evidence, perspectives, and possibilities together to
+              make informed choices about what comes next.
+            </p>
+            <ul>
+              <li>Strategic recommendations</li>
+              <li>Options analysis and decision frameworks</li>
+              <li>Priorities and areas of opportunity</li>
+            </ul>
+          </article>
+
+          <article class="output-card">
+            <span class="output-number">03</span>
+            <h3>Shared understanding and alignment</h3>
+            <p>
+              Make space for different perspectives, surface what matters,
+              and create a stronger foundation for collective decisions.
+            </p>
+            <ul>
+              <li>Stakeholder insights and feedback</li>
+              <li>Documented discussions and decisions</li>
+              <li>Areas of agreement and unresolved questions</li>
+            </ul>
+          </article>
+
+          <article class="output-card">
+            <span class="output-number">04</span>
+            <h3>A practical plan for action</h3>
+            <p>
+              Translate decisions into meaningful next steps that
+              organizations can put into practice and build on.
+            </p>
+            <ul>
+              <li>Prioritized recommendations</li>
+              <li>Implementation plans and roadmaps</li>
+              <li>Measures to track progress and impact</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="outputs-note">
+          Every engagement is different. Outputs are shaped around the
+          organization's needs, the questions being explored, and the
+          outcomes the work is intended to support.
+        </p>
+
+      </div>
+    </section>
 
     <!-- APPROACH GROUNDED IN CURIOSITY -->
     <section class="collaboration-section">
@@ -303,100 +330,6 @@ const services = [
     object-fit: cover;
     object-position: center;
     display: block;
-  }
-
-
-  /* ORGANIZATIONAL CHALLENGES */
-
-  .challenges-section {
-    background: #F5F2EA;
-    padding: 85px 7%;
-  }
-
-  .challenges-inner {
-    max-width: 1250px;
-    margin: 0 auto;
-  }
-
-  .challenges-heading {
-    max-width: 780px;
-    margin-bottom: 45px;
-  }
-
-  .challenges-heading h2 {
-    margin: 0 0 20px;
-    color: #23364A;
-    font-family: "Playfair Display", serif;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-
-  .challenges-heading > p:not(.eyebrow) {
-    margin: 0;
-    color: #23364A;
-    font-size: 17px;
-    line-height: 1.85;
-  }
-
-  .challenges-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  .challenge-card {
-    background: #FFFFFF;
-    padding: 32px 34px;
-    border: 1px solid rgba(35, 54, 74, 0.09);
-  }
-
-  .challenge-card h3 {
-    margin: 0 0 17px;
-    color: #23364A;
-    font-family: "Playfair Display", serif;
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 1.35;
-  }
-
-  .challenge-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .challenge-card li {
-    position: relative;
-    padding-left: 19px;
-    margin-bottom: 12px;
-    color: #23364A;
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .challenge-card li:last-child {
-    margin-bottom: 0;
-  }
-
-  .challenge-card li::before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #668A9A;
-  }
-
-  .challenges-note {
-    max-width: 900px;
-    margin: 35px 0 0;
-    color: #23364A;
-    font-size: 16px;
-    line-height: 1.8;
-    font-style: italic;
   }
 
 
@@ -511,6 +444,110 @@ const services = [
   }
 
 
+  /* CLIENT OUTPUTS */
+
+  .outputs-section {
+    background: #F5F2EA;
+    color: #23364A;
+    padding: 90px 7%;
+  }
+
+  .outputs-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .outputs-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+
+  .outputs-heading h2 {
+    margin: 0 0 25px;
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .outputs-heading > p:not(.eyebrow) {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  .outputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .output-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(35, 54, 74, 0.1);
+    padding: 35px 38px;
+  }
+
+  .output-number {
+    display: block;
+    color: #668A9A;
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  .output-card h3 {
+    margin: 0 0 15px;
+    color: #23364A;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .output-card > p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .output-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .output-card li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .output-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #668A9A;
+  }
+
+  .outputs-note {
+    max-width: 850px;
+    margin: 35px auto 0;
+    color: #536474;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+    font-style: italic;
+  }
+
+
   /* APPROACH GROUNDED IN CURIOSITY */
 
   .collaboration-section {
@@ -618,20 +655,20 @@ const services = [
       padding: 50px 8%;
     }
 
-    .challenges-section {
-      padding: 65px 7%;
+    .service h2 {
+      font-size: 27px;
     }
 
-    .challenges-grid {
+    .outputs-section {
+      padding: 70px 6%;
+    }
+
+    .outputs-grid {
       gap: 16px;
     }
 
-    .challenge-card {
-      padding: 27px 25px;
-    }
-
-    .service h2 {
-      font-size: 27px;
+    .output-card {
+      padding: 28px 25px;
     }
 
     .collaboration-grid {
@@ -666,39 +703,6 @@ const services = [
       grid-template-columns: 1fr;
     }
 
-    .challenges-section {
-      padding: 55px 7%;
-    }
-
-    .challenges-heading h2 {
-      font-size: 30px;
-    }
-
-    .challenges-heading > p:not(.eyebrow) {
-      font-size: 16px;
-    }
-
-    .challenges-grid {
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .challenge-card {
-      padding: 26px 24px;
-    }
-
-    .challenge-card h3 {
-      font-size: 23px;
-    }
-
-    .challenge-card li {
-      font-size: 16px;
-    }
-
-    .challenges-note {
-      font-size: 15px;
-    }
-
     .service {
       padding: 45px 7%;
     }
@@ -726,6 +730,47 @@ const services = [
 
     .service-outcome p {
       font-size: 16px;
+    }
+
+    .outputs-section {
+      padding: 55px 7%;
+    }
+
+    .outputs-heading {
+      margin-bottom: 35px;
+    }
+
+    .outputs-heading h2 {
+      font-size: 30px;
+    }
+
+    .outputs-heading > p:not(.eyebrow) {
+      font-size: 16px;
+    }
+
+    .outputs-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .output-card {
+      padding: 28px 25px;
+    }
+
+    .output-card h3 {
+      font-size: 22px;
+    }
+
+    .output-card > p {
+      font-size: 16px;
+    }
+
+    .output-card li {
+      font-size: 15px;
+    }
+
+    .outputs-note {
+      font-size: 14px;
     }
 
     .collaboration-section {
