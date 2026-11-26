@@ -71,45 +71,6 @@ const services = [
       "More purposeful implementation, stronger adoption, and meaningful improvements that can be sustained over time."
   }
 ];
-
-const challenges = [
-  {
-    number: "01",
-    title: "The problem isn't clear.",
-    examples: [
-      "Something isn't working, but no one can agree on why.",
-      "We're addressing symptoms, but the underlying issue keeps resurfacing.",
-      "We know change is needed, but aren't sure where to start."
-    ]
-  },
-  {
-    number: "02",
-    title: "People aren't aligned.",
-    examples: [
-      "Different teams have different interpretations of the problem.",
-      "Competing priorities are making it difficult to move forward.",
-      "Important decisions are being made without meaningful input from the people affected."
-    ]
-  },
-  {
-    number: "03",
-    title: "Progress has stalled.",
-    examples: [
-      "Previous initiatives haven't delivered the results we expected.",
-      "Projects keep losing momentum between planning and implementation.",
-      "We're investing time and resources without knowing where they'll make the greatest difference."
-    ]
-  },
-  {
-    number: "04",
-    title: "Change is more complex than expected.",
-    examples: [
-      "New technology or processes aren't being adopted as expected.",
-      "Operational challenges are affecting quality, performance, or service delivery.",
-      "We need to make significant decisions without having all the information."
-    ]
-  }
-];
 ---
 
 <BaseLayout
@@ -119,11 +80,9 @@ const challenges = [
   <section class="services">
 
     <!-- INTRODUCTION -->
-
     <div class="services-intro section">
       <div class="section-inner">
         <div class="intro-grid">
-
           <div class="intro-content">
             <p class="eyebrow">How Causeway Helps</p>
 
@@ -146,80 +105,82 @@ const challenges = [
 
           <div class="intro-image">
             <img
-              src="/causeway-philosophy-top.png"
-              alt="A diverse woman leading a discussion while a colleague listens attentively"
+              src="/services-collaboration.jpg"
+              alt="Colleagues collaborating in a welcoming, contemporary setting"
               loading="eager"
             />
           </div>
-
         </div>
       </div>
     </div>
 
-
-    <!-- ORGANIZATIONAL CHALLENGES -->
-
+    <!-- THE CHALLENGES ORGANIZATIONS FACE -->
     <section class="challenges-section">
-
       <div class="challenges-inner">
-
         <div class="challenges-heading">
-          <p class="eyebrow">Recognizing the Challenge</p>
-
-          <h2>Sometimes you know something needs to change. You just aren't sure where to begin.</h2>
-
-          <p class="challenges-intro">
-            Organizations don't always come with a clearly defined problem.
-            Sometimes there's a concern, a stalled initiative, competing
-            perspectives, or a sense that something isn't working as it
-            should.
-          </p>
-
-          <p class="challenges-prompt">
-            You might recognize some of these situations:
+          <p class="eyebrow">Where the Work Often Begins</p>
+          <h2>Sometimes the challenge is clear. Sometimes finding it is the work.</h2>
+          <p>
+            Organizations reach out to Causeway at different points in a
+            challenge. You might recognize one of these situations, or be
+            working through something that is harder to put into words.
           </p>
         </div>
 
         <div class="challenges-grid">
+          <article class="challenge-card">
+            <span class="challenge-number">01</span>
+            <h3>The problem isn't clear</h3>
+            <ul>
+              <li>Something isn't working, but there isn't agreement about why.</li>
+              <li>Efforts are focused on symptoms rather than underlying causes.</li>
+              <li>You know something needs to change, but aren't sure where to start.</li>
+            </ul>
+          </article>
 
-          {challenges.map((challenge) => (
-            <article class="challenge-card">
+          <article class="challenge-card">
+            <span class="challenge-number">02</span>
+            <h3>People aren't aligned</h3>
+            <ul>
+              <li>Different teams or stakeholders see the challenge in different ways.</li>
+              <li>Competing priorities make it difficult to move forward.</li>
+              <li>Decisions are being made without the perspectives of the people affected.</li>
+            </ul>
+          </article>
 
-              <span class="challenge-number">{challenge.number}</span>
+          <article class="challenge-card">
+            <span class="challenge-number">03</span>
+            <h3>Progress has stalled</h3>
+            <ul>
+              <li>Previous initiatives haven't delivered the outcomes you expected.</li>
+              <li>Plans lose momentum between strategy and implementation.</li>
+              <li>Time and resources are being invested without clarity on what will make the biggest difference.</li>
+            </ul>
+          </article>
 
-              <h3>{challenge.title}</h3>
-
-              <ul>
-                {challenge.examples.map((example) => (
-                  <li>{example}</li>
-                ))}
-              </ul>
-
-            </article>
-          ))}
-
+          <article class="challenge-card">
+            <span class="challenge-number">04</span>
+            <h3>Change feels complex</h3>
+            <ul>
+              <li>New technology or processes aren't being adopted as intended.</li>
+              <li>Operational challenges are affecting quality, performance, or service delivery.</li>
+              <li>Important decisions need to be made with incomplete information.</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="challenges-note">
-          <p>
-            These are starting points, not prerequisites. You don't need to
-            have the problem figured out before reaching out. Helping you
-            understand the challenge is part of the work.
-          </p>
-        </div>
-
+        <p class="challenges-note">
+          These are starting points, not prerequisites. You don't need to
+          have the problem figured out before reaching out. Helping you
+          understand the challenge is part of the work.
+        </p>
       </div>
-
     </section>
 
-
     <!-- SERVICES -->
-
     <div class="service-grid">
-
       {services.map((service, index) => (
         <article class={`service service-${index + 1}`}>
-
           <div class="service-inner">
 
             <span class="number">{service.number}</span>
@@ -231,7 +192,6 @@ const challenges = [
             </p>
 
             <div class="service-details">
-
               <h3>How Causeway Can Help</h3>
 
               <ul>
@@ -239,29 +199,20 @@ const challenges = [
                   <li>{detail}</li>
                 ))}
               </ul>
-
             </div>
 
             <div class="service-outcome">
-
               <h3>What This Makes Possible</h3>
-
               <p>{service.outcome}</p>
-
             </div>
 
           </div>
-
         </article>
       ))}
-
     </div>
 
-
-    <!-- VISUAL BREAK -->
-
+    <!-- APPROACH GROUNDED IN CURIOSITY -->
     <section class="collaboration-section">
-
       <div class="collaboration-grid">
 
         <div class="collaboration-image">
@@ -273,7 +224,6 @@ const challenges = [
         </div>
 
         <div class="collaboration-content">
-
           <p class="eyebrow">An Approach Grounded in Curiosity</p>
 
           <h2>Better decisions start with better questions.</h2>
@@ -290,20 +240,14 @@ const challenges = [
             the problem well enough to make a decision that moves things
             in the right direction.
           </p>
-
         </div>
 
       </div>
-
     </section>
 
-
     <!-- CLOSING -->
-
     <section class="services-closing">
-
       <div class="closing-inner">
-
         <p class="eyebrow">A Thoughtful Approach</p>
 
         <h2>Not every challenge needs the same approach.</h2>
@@ -320,17 +264,13 @@ const challenges = [
         <p class="closing-emphasis">
           The right next step starts with the right conversation.
         </p>
-
       </div>
-
     </section>
 
   </section>
 </BaseLayout>
 
-
 <style>
-
   /* INTRODUCTION */
 
   .services-intro {
@@ -374,7 +314,7 @@ const challenges = [
 
   .challenges-section {
     background: #F5F2EA;
-    padding: 90px 7%;
+    padding: 85px 7%;
   }
 
   .challenges-inner {
@@ -383,60 +323,49 @@ const challenges = [
   }
 
   .challenges-heading {
-    max-width: 850px;
-    margin: 0 auto 55px;
-    text-align: center;
+    max-width: 780px;
+    margin-bottom: 45px;
   }
 
   .challenges-heading h2 {
-    margin: 0 auto 25px;
-    max-width: 800px;
+    margin: 0 0 20px;
     color: #23364A;
     font-family: "Playfair Display", serif;
-    font-size: 39px;
+    font-size: 38px;
     font-weight: 400;
-    line-height: 1.35;
+    line-height: 1.3;
   }
 
-  .challenges-intro {
-    max-width: 760px;
-    margin: 0 auto 22px;
+  .challenges-heading > p:not(.eyebrow) {
+    margin: 0;
+    color: #23364A;
     font-size: 17px;
-    line-height: 1.9;
-  }
-
-  .challenges-prompt {
-    margin: 30px 0 0;
-    color: #668A9A;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
+    line-height: 1.85;
   }
 
   .challenges-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 20px;
   }
 
   .challenge-card {
     background: #FFFFFF;
-    padding: 35px 38px;
+    padding: 32px 34px;
     border: 1px solid rgba(35, 54, 74, 0.09);
-    border-radius: 3px;
   }
 
   .challenge-number {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #668A9A;
     font-family: "Playfair Display", serif;
-    font-size: 38px;
+    font-size: 34px;
     line-height: 1;
   }
 
   .challenge-card h3 {
-    margin: 0 0 22px;
+    margin: 0 0 17px;
     color: #23364A;
     font-family: "Playfair Display", serif;
     font-size: 25px;
@@ -452,10 +381,11 @@ const challenges = [
 
   .challenge-card li {
     position: relative;
-    padding-left: 22px;
-    margin-bottom: 15px;
+    padding-left: 19px;
+    margin-bottom: 12px;
+    color: #23364A;
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.7;
   }
 
   .challenge-card li:last-child {
@@ -465,29 +395,21 @@ const challenges = [
   .challenge-card li::before {
     content: "";
     position: absolute;
-    left: 0;
     top: 11px;
-    width: 6px;
-    height: 6px;
+    left: 0;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: #668A9A;
   }
 
   .challenges-note {
-    max-width: 850px;
-    margin: 45px auto 0;
-    padding-top: 25px;
-    border-top: 1px solid rgba(35, 54, 74, 0.2);
-    text-align: center;
-  }
-
-  .challenges-note p {
-    margin: 0;
+    max-width: 900px;
+    margin: 35px 0 0;
     color: #23364A;
-    font-family: "Playfair Display", serif;
-    font-size: 22px;
+    font-size: 16px;
+    line-height: 1.8;
     font-style: italic;
-    line-height: 1.7;
   }
 
 
@@ -602,10 +524,11 @@ const challenges = [
   }
 
 
-  /* COLLABORATION IMAGE SECTION */
+  /* APPROACH GROUNDED IN CURIOSITY */
 
   .collaboration-section {
-    background: #F5F2EA;
+    background: #FFFFFF;
+    color: #23364A;
     padding: 85px 7%;
   }
 
@@ -631,8 +554,13 @@ const challenges = [
     display: block;
   }
 
+  .collaboration-content .eyebrow {
+    color: #668A9A;
+  }
+
   .collaboration-content h2 {
     margin: 0 0 25px;
+    color: #23364A;
     font-family: "Playfair Display", serif;
     font-size: 36px;
     font-weight: 400;
@@ -640,6 +568,7 @@ const challenges = [
   }
 
   .collaboration-content > p:not(.eyebrow) {
+    color: #23364A;
     font-size: 17px;
     line-height: 1.85;
     margin-bottom: 20px;
@@ -686,10 +615,9 @@ const challenges = [
   }
 
 
-  /* TABLET */
+  /* MOBILE */
 
   @media (max-width: 850px) {
-
     .intro-grid {
       grid-template-columns: 1fr;
       gap: 35px;
@@ -701,6 +629,18 @@ const challenges = [
 
     .service {
       padding: 50px 8%;
+    }
+
+    .challenges-section {
+      padding: 65px 7%;
+    }
+
+    .challenges-grid {
+      gap: 16px;
+    }
+
+    .challenge-card {
+      padding: 27px 25px;
     }
 
     .service h2 {
@@ -719,22 +659,9 @@ const challenges = [
     .collaboration-content h2 {
       font-size: 32px;
     }
-
-    .challenges-section {
-      padding: 70px 6%;
-    }
-
-    .challenge-card {
-      padding: 30px;
-    }
-
   }
 
-
-  /* MOBILE */
-
   @media (max-width: 600px) {
-
     .services-intro {
       padding-top: 40px;
       padding-bottom: 50px;
@@ -748,29 +675,29 @@ const challenges = [
       height: 270px;
     }
 
-    .challenges-section {
-      padding: 55px 7%;
+    .service-grid {
+      grid-template-columns: 1fr;
     }
 
-    .challenges-heading {
-      margin-bottom: 35px;
+    .challenges-section {
+      padding: 55px 7%;
     }
 
     .challenges-heading h2 {
       font-size: 30px;
     }
 
-    .challenges-intro {
+    .challenges-heading > p:not(.eyebrow) {
       font-size: 16px;
     }
 
     .challenges-grid {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 14px;
     }
 
     .challenge-card {
-      padding: 28px 25px;
+      padding: 26px 24px;
     }
 
     .challenge-card h3 {
@@ -782,15 +709,7 @@ const challenges = [
     }
 
     .challenges-note {
-      margin-top: 35px;
-    }
-
-    .challenges-note p {
-      font-size: 20px;
-    }
-
-    .service-grid {
-      grid-template-columns: 1fr;
+      font-size: 15px;
     }
 
     .service {
@@ -853,7 +772,5 @@ const challenges = [
     .services-closing .closing-emphasis {
       font-size: 21px;
     }
-
   }
-
 </style>
